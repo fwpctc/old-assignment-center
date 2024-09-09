@@ -4,4 +4,15 @@
 // Several foreground scripts can be declared
 // and injected into the same or different pages.
 
-console.log("This prints to the console of the page (injected only if the page url matched)")
+
+setTimeout(() => {
+
+    var as = document.getElementsByTagName('a');
+    for (var i = 0; i < as.length; i++) {
+        if (as[i].innerText.includes("Assignment Center")) {
+            as[i].href = "https://fwparker.myschoolapp.com/app/student#studentmyday/assignment-center";
+           // break;
+        }
+    }
+    // document.querySelector('#site-nav-lower > div > ul > li:nth-child(3) > a').href = "https://fwparker.myschoolapp.com/app/student#studentmyday/assignment-center"
+}, 500);
